@@ -21,3 +21,4 @@ log/*
 /coverage/
 public/system
 config/development.sphinx.conf
+db/sphinx
