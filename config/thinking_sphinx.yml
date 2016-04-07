@@ -1,0 +1,8 @@
+development:
+  stopwords: "config/stopwords.txt"
+
+test:
+  stopwords: "config/stopwords.txt"
+
+production:
+  stopwords: "config/stopwords.txt"
