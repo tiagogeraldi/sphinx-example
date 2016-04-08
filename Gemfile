@@ -12,6 +12,7 @@ gem 'mysql2' # sphinx requirement
 gem 'thinking-sphinx', '~> 3.1.4'
 gem 'slim'
 gem 'faker'
+gem 'simple_form'
 
 gem 'jquery-rails'
 gem 'turbolinks'

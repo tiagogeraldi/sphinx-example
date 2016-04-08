@@ -1,0 +1,4 @@
+- if @articles.any?
+  | $('.search-result').html('#{j render 'articles'}');
+- else
+  | $('.search-result').html('No result found');

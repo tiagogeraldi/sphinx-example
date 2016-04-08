@@ -1,0 +1,9 @@
+h3
+  | #{@articles.total_entries} results found
+
+table.table
+  - @articles.each_with_index do |article, index|
+    - if index < 3
+      tr
+        td = article.id
+        td.text-left = article.title

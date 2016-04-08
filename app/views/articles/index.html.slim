@@ -1,0 +1,11 @@
+.inner.cover
+  h1.cover-heading Search articles
+  p.lead It generates stats based on your search results
+
+  = simple_form_for :search, url: articles_path, remote: true, html: { class: 'form-inline' } do |f|
+    .form-group
+      = f.input :term, as: :search, label: false, input_html: { class: 'form-control searcher' }
+    .form-group
+      = f.submit 'Search', class: 'btn btn-primary'
+  .row
+    .search-result
