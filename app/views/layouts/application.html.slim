@@ -28,7 +28,9 @@ html
               nav
                 ul.nav.masthead-nav
                   li
-                    = link_to  'Stats', '#'
+                    = link_to 'Home', root_path
                   li
-                    a href="#"  Github
+                    = link_to 'Stats', stats_path
+                  li
+                    a href="https://github.com/tiagogeraldi/sphinx-example" Github
           = yield

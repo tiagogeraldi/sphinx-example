@@ -1,0 +1,15 @@
+h1 Top 10 search terms
+
+.alert.alert-info
+  | A background worker update stats each 5 minutes
+
+table.table
+  tr
+    th Query term
+    th Results found
+    th Searches
+  - @stats.each do |stat|
+    tr
+      td.text-left  = stat.query
+      td.text-right = stat.entries
+      td.text-right = stat.searches
