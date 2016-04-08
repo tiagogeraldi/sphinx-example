@@ -3,10 +3,21 @@ class ArticlesController < ApplicationController
   end
 
   def create
-    @articles = Article.search(params[:search][:term])
+    term      = params[:search][:term]
+    @articles = Article.search(term)
 
-    Log.create query:      params[:search][:term],
-               entries:    @articles.total_entries,
-               ip_address: request.remote_ip
+    if (term.downcase.split - stopwords).any?
+      Log.create query:      term,
+                 entries:    @articles.total_entries,
+                 ip_address: request.remote_ip
+    end
+  end
+
+  private
+
+  def stopwords
+    Rails.cache.fetch 'stopwords' do
+      File.open('config/stopwords.txt').read.split("\n")
+    end
   end
 end
