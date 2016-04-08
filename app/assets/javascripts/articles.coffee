@@ -1,4 +1,3 @@
-$(document).on 'ready', ->
-  $('#search_term').on 'keyup', ->
-    $(this).closest('form').submit()
-    $('search-result').html('Loading...')
+$('#search_term').bind 'keyup', 'keydown', ->
+  $(this).closest('form').submit()
+  $('search-result').html('Loading...')
