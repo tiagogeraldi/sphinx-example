@@ -1,3 +1,5 @@
-$('#search_term').bind 'keyup', 'keydown', ->
-  $(this).closest('form').submit()
-  $('search-result').html('Loading...')
+$('#search_term').bind 'keyup', ->
+  $('.search-result').html('Loading...')
+  setTimeout ( ->
+    $('#search_term').closest('form').submit()
+  ), 800
