@@ -3,6 +3,9 @@ h1 Top 10 search terms
 .alert.alert-info
   | A background worker update stats each 5 minutes
 
+p.pull-right
+  = link_to 'Delete all', destroy_all_stats_path
+
 table.table
   tr
     th Query term
