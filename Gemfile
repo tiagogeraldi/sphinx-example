@@ -10,6 +10,7 @@ gem 'sidekiq'
 gem 'sinatra'
 gem 'mysql2' # sphinx requirement
 gem 'thinking-sphinx', '~> 3.1.4'
+gem 'flying-sphinx'
 gem 'slim'
 gem 'faker'
 gem 'simple_form'
